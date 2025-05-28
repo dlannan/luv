@@ -34,6 +34,8 @@ jobs:
       runs-on: windows-latest
       steps:
         - uses: actions/checkout@v4
+          with: 
+            submodules: true
         - uses: ilammy/msvc-dev-cmd@v1.4.1
         - name: Build luv lib for Win64
           run: ./msvcbuild.bat
@@ -42,7 +44,6 @@ jobs:
         - name: Archive results
           uses: actions/upload-artifact@v4
           with:
-            submodules: true
             name: Windows luv
             path: |
               ./bin/luv.dll 
