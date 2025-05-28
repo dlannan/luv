@@ -36,7 +36,7 @@ jobs:
         - uses: actions/checkout@v4
         - uses: ilammy/msvc-dev-cmd@v1.4.1
         - name: Build luv lib for Win64
-          run: ./build-luv.bat
+          run: ./msvcbuild.bat
           shell: bash
            
         - name: Archive results
