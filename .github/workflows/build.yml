@@ -46,7 +46,7 @@ jobs:
           with:
             name: Windows luv
             path: |
-              ./luv/build/Release/luv.dll
+              D:\a\luv\luv\build\Release\luv.dll
               
     build-macos:
       runs-on: macos-13
