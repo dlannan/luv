@@ -51,6 +51,8 @@
 #include "util.c"
 #include "work.c"
 
+int luaopen_msgpack ( lua_State *L );
+
 static const luaL_Reg luv_functions[] = {
   // loop.c
   {"loop_close", luv_loop_close},
@@ -943,6 +945,8 @@ LUALIB_API int luaopen_luv (lua_State* L) {
   lua_setfield(L, -2, "errno");
 
 #undef XX
+
+  luaopen_msgpack(L);
 
   return 1;
 }
