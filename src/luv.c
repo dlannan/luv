@@ -945,8 +945,5 @@ LUALIB_API int luaopen_luv (lua_State* L) {
   lua_setfield(L, -2, "errno");
 
 #undef XX
-
-  luaopen_msgpack(L);
-
   return 1;
 }
